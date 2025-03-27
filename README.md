@@ -29,14 +29,27 @@
 ## Project setup
 
 ```bash
-$ npm install
+$ npm install ----legacy-peer-deps
+```
+
+## Migrations
+
+```bash
+# Generate migration
+$ npx prisma migrate dev --name init
+
+# Run pending migrations
+$ npx prisma migrate deploy
+
+# Reset migrations
+$ npx prisma migrate reset
 ```
 
 ## Compile and run the project
 
 ```bash
 # development
-$ npm run start
+$ npm run start:dev
 
 # watch mode
 $ npm run start:dev
