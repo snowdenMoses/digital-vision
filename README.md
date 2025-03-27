@@ -29,7 +29,24 @@
 ## Project setup
 
 ```bash
-$ npm install ----legacy-peer-deps
+#To install dependencies use the --legacy-peer-deps flag
+$ npm install --legacy-peer-deps
+```
+
+## Compile and run the project
+
+```bash
+# development
+$ npm run start:dev
+
+# Run this command if npm run start:dev does not work straight away
+$ npx generate prisma
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
 ```
 
 ## Migrations
@@ -43,19 +60,6 @@ $ npx prisma migrate deploy
 
 # Reset migrations
 $ npx prisma migrate reset
-```
-
-## Compile and run the project
-
-```bash
-# development
-$ npm run start:dev
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
 ## Run tests
